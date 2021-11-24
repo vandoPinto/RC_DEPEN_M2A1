@@ -125,7 +125,7 @@
                 } else if (opcaoSelecionada != opcaoCorreta) { //se opção selecionada for incorreta, exibir aviso do erro e mostrar feedback
                     $("#" + questao + " form input[name='opcao']:checked+label").addClass("incorreta");
                     $("#" + questao + " form input[name='opcao']:checked+label+div").addClass("incorreta").show('slow');
-                    $(".me_feedback.incorreta").css('top', $("#" + questao + "verificar").position().top - 60);
+                    $(".me_feedback.incorreta").css('top', $("#" + questao + "verificar").position().top - 200);
                     exibirFeedback(questao, opcaoSelecionada);
                 } else if (opcaoSelecionada == opcaoCorreta) {
                     //se opção selecionada for a correta, exibir aviso de acerto e mostrar feedback
@@ -137,7 +137,7 @@
                     } else {
                         $("#fb-" + questao + "-" + opcaoCorreta).addClass("correta");
                     }
-                    $(".me_feedback.correta").css('top', $("#" + questao + "verificar").position().top - 50);
+                    $(".me_feedback.correta").css('top', $("#" + questao + "verificar").position().top - 200);
                     pontuacao++;
                     console.log(pontuacao);
                     exibirFeedback(questao, opcaoSelecionada);
@@ -300,7 +300,7 @@
         }
 
         input[type="button"]:hover {
-            background-color: #fe592b;
+            background-color: #4e1302;
         }
 
         input[type="button"]:active {
@@ -327,7 +327,7 @@
 
         input[type="radio"]+label:hover,
         input[type="checkbox"]+label:hover {
-            background-color: #fe592b;
+            background-color: #fac900;
             color: red;
         }
 
@@ -339,7 +339,7 @@
 
         input[type="radio"]:checked+label,
         input[type="checkbox"]:checked+label {
-            background-color: #fe592b;
+            background-color: #fac900;
             color: red;
         }
 
@@ -506,26 +506,79 @@
             <p><strong>Relacione as colunas quanto ao funcionamento previsto (em horas de trabalho) para
                     a oferta de serviços de saúde prisional de acordo com o quantitativo de custodiados.</strong>
             </p>
-            <img style="margin-top: 10px;width: 374px;" src="recursos/imgs/SI_tabela.png">
+            <img style="margin-top: 10px;margin-left: 30px;width: 436px;" src="recursos/imgs/SI_tabela.png">
+         
         </div>
         <form style="font-size: 10px;">
             <input type="radio" name="opcao" value="0">
             <label>I – II – III;</label>
-            <div class="me_feedback"> Sequencia incorreta.</div>
+            <div class="me_feedback" style="display: block;top: 80px;width: 462px;"><img class="img-logo"
+                    src="recursos/imgs/SI_CE.png">Na verdade, a sequência correta não
+                é essa. Vamos conferir? De acordo com a Portaria GM/MS nº 2.298/2021, ao
+                considerar a população prisional e o funcionamento dos serviços de saúde, o MS classifica os
+                estabelecimentos
+                prisionais, em três faixas, a saber:
+                I - unidades prisionais que contenham até 300 (trezentos) custodiados: serviço de saúde com
+                funcionamento mínimo
+                de 6 (seis) horas semanais, sob responsabilidade do ente municipal, por meio de eAPP;
+                II - unidades prisionais que contenham de 101 (cento e um) a 1.700 (mil e setecentos) custodiados:
+                serviço de saúde
+                com funcionamento mínimo de 20 (vinte) horas semanais, sob responsabilidade do ente estadual ou
+                municipal, por
+                meio de eAPP Essencial ou Ampliada;
+                III - unidades prisionais que contenham de 1.201 (mil duzentos e um) a 2.700 (dois mil e setecentos)
+                custodiados:
+                serviço de saúde com funcionamento mínimo de 30 (trinta) horas semanais, sob responsabilidade do estado
+                ou
+                município, por meio de eAPP Essencial ou Ampliada podendo esta ser complementada.</div>
             <input type="radio" name="opcao" value="1">
             <label>I – III – II;</label>
-            <div class="me_feedback"> Sequencia Correta.</div>
+            <div class="me_feedback" style="display: block;top: 80px;width: 462px;"><img class="img-logo"
+                    src="recursos/imgs/SI_CE.png">Parabéns! De acordo com com a
+                Portaria GM/MS nº 2.298/2021, ao considerar a população prisional e o
+                funcionamento dos serviços de saúde, o MS classifica os estabelecimentos prisionais, em três faixas, a
+                saber:
+                I - unidades prisionais que contenham até 300 (trezentos) custodiados: serviço de saúde com
+                funcionamento
+                mínimo de 6 (seis) horas semanais, sob responsabilidade do ente municipal, por meio de eAPP;
+                II - unidades prisionais que contenham de 101 (cento e um) a 1.700 (mil e setecentos) custodiados:
+                serviço de
+                saúde com funcionamento mínimo de 20 (vinte) horas semanais, sob responsabilidade do ente estadual ou
+                municipal, por meio de eAPP Essencial ou Ampliada;
+                III - unidades prisionais que contenham de 1.201 (mil duzentos e um) a 2.700 (dois mil e setecentos)
+                custodiados:
+                serviço de saúde com funcionamento mínimo de 30 (trinta) horas semanais, sob responsabilidade do estado
+                ou
+                município, por meio de eAPP Essencial ou Ampliada podendo esta ser complementada.</div>
             <input type="radio" name="opcao" value="2">
             <label>III – II – I;</label>
-            <div class="me_feedback"> Sequencia incorreta.</div>
-           
+            <div class="me_feedback" style="display: block;top: 80px;width: 462px;"><img class="img-logo"
+                    src="recursos/imgs/SI_CE.png">Na verdade, a sequência correta não
+                é essa. Vamos conferir? De acordo com a Portaria GM/MS nº 2.298/2021, ao
+                considerar a população prisional e o funcionamento dos serviços de saúde, o MS classifica os
+                estabelecimentos
+                prisionais, em três faixas, a saber:
+                I - unidades prisionais que contenham até 300 (trezentos) custodiados: serviço de saúde com
+                funcionamento mínimo
+                de 6 (seis) horas semanais, sob responsabilidade do ente municipal, por meio de eAPP;
+                II - unidades prisionais que contenham de 101 (cento e um) a 1.700 (mil e setecentos) custodiados:
+                serviço de saúde
+                com funcionamento mínimo de 20 (vinte) horas semanais, sob responsabilidade do ente estadual ou
+                municipal, por
+                meio de eAPP Essencial ou Ampliada;
+                III - unidades prisionais que contenham de 1.201 (mil duzentos e um) a 2.700 (dois mil e setecentos)
+                custodiados:
+                serviço de saúde com funcionamento mínimo de 30 (trinta) horas semanais, sob responsabilidade do estado
+                ou
+                município, por meio de eAPP Essencial ou Ampliada podendo esta ser complementada.</div>
+
             <input type="hidden" name="resposta" value="1">
             <input type="button" value="Verificar resposta">
         </form>
     </section>
 
     <!-- Questao 2 -->
-    <section>
+    <section style="margin-top: 145px;">
         <div class="enunciado">
             <p><strong>As categorias de dentistas e médicos clínicos apresentam um maior
                     quantitativo referente aos trabalhadores de saúde no sistema prisional.</strong>
@@ -534,13 +587,13 @@
         </div>
         <form>
             <input type="radio" name="opcao" value="0">
-            <label>a) Verdadeiro</label>
+            <label>Verdadeiro</label>
             <div class="me_feedback"> <img class="img-logo" src="recursos/imgs/SI_CE.png">De fato, a afirmativa está
                 incorreta! Auxiliar e técnicos de enfermagem (2.603), seguidos de
                 enfermeiro (1.534) e psicólogo (1.207), apresentam um maior quantitativo em relação aos
                 trabalhadores de saúde nas unidades prisionais do Brasil, segundo dados do Infopen de 2020.</div>
             <input type="radio" name="opcao" value="1">
-            <label>b) Falso</label>
+            <label>Falso</label>
             <div class="me_feedback"> <img class="img-logo" src="recursos/imgs/SI_CE.png">Você acertou! Auxiliar e
                 técnicos de enfermagem (2.603), seguidos de enfermeiro (1.534)
                 e psicólogo (1.207), apresentam um maior quantitativo em relação aos trabalhadores de
@@ -553,74 +606,70 @@
 
     </section>
 
-    <!-- Questão 1 -->
-    <section>
+    <!-- Questão 3 -->
+    <section style="width: 540px;">
         <div class="enunciado">
             <p><strong>Quem compõe o Comitê de Especialistas em Saúde Prisional, de acordo com o
                     art. 2º, da Portaria nº 2.613/2012?</strong>
             </p>
             <p>
         </div>
-
-        <input type="radio" name="opcao" value="0">
-        <label>a) O Comitê de Especialistas em Saúde Prisional será composto de membros que
-            representam os segmentos do poder público, da comunidade científica e da sociedade,
-            oriundos de instituições públicas e privadas envolvidas em atividades de pesquisa.</label>
-        <div class="me_feedback"> <img class="img-logo" src="recursos/imgs/SI_CE.png"> Parabéns! De acordo com o art.
-            2º, da Portaria nº 2.613/2012, “o Comitê de Especialistas
-            em Saúde Prisional será composto por membros que representam os segmentos do
-            poder público, da comunidade científica e da sociedade, oriundos de instituições
-            públicas e privadas envolvidas em atividades de pesquisa”.</div>
-
-        <input type="radio" name="opcao" value="1">
-        <label>b) O Comitê de Especialistas em Saúde Prisional será composto de membros que
-            representam empresários do ramo da segurança pública, da comunidade científica e
-            da sociedade, oriundos de instituições públicas e privadas envolvidas em atividades de
-            pesquisa.</label>
-        <div class="me_feedback"> <img class="img-logo" src="recursos/imgs/SI_CE.png">De acordo com o art. 2º, da
-            Portaria nº 2.613/2012, “o Comitê de Especialistas em Saúde Prisional será
-            composto por membros que representam os segmentos do poder público, da comunidade científica e
-            da sociedade, oriundos de instituições públicas e privadas envolvidas em atividades de pesquisa”.
-            Então, apenas a alternativa “a” está correta.</div>
-
-        <input type="radio" name="opcao" value="2">
-        <label>c) O Comitê de Especialistas em Saúde Prisional será composto de membros que
-            representam os segmentos do poder público, da comunidade científica e da sociedade,
-            oriundos de instituições públicas e privadas envolvidas em atividades de ensino e
-            extensão.</label>
-        <div class="me_feedback"> <img class="img-logo" src="recursos/imgs/SI_CE.png">De acordo com o art. 2º, da
-            Portaria nº
-            2.613/2012, “o Comitê de Especialistas em Saúde Prisional será
-            composto por membros que representam os segmentos do poder público, da comunidade científica e
-            da sociedade, oriundos de instituições públicas e privadas envolvidas em atividades de pesquisa”.
-            Então, apenas a alternativa “a” está correta.</div>
-
-        <input type="radio" name="opcao" value="3">
-        <label>d) O Comitê de Especialistas em Saúde Prisional será composto de 29 membros que
-            representam os segmentos do poder público, da comunidade científica e da sociedade,
-            oriundos de instituições públicas e privadas envolvidas em atividades de pesquisa.</label>
-        <div class="me_feedback"> <img class="img-logo" src="recursos/imgs/SI_CE.png">De acordo com o art. 2º, da
-            Portaria nº
-            2.613/2012, “o Comitê de Especialistas em Saúde Prisional será
-            composto por membros que representam os segmentos do poder público, da comunidade científica e
-            da sociedade, oriundos de instituições públicas e privadas envolvidas em atividades de pesquisa”.
-            Então, apenas a alternativa “a” está correta.</div>
-
-        <input type="radio" name="opcao" value="4">
-        <label>e) O Comitê de Especialistas em Saúde Prisional será composto de pessoas da
-            sociedade civil que simpatizem com atividades de pesquisa.</label>
-        <div class="me_feedback"> <img class="img-logo" src="recursos/imgs/SI_CE.png">De acordo com o art. 2º, da
-            Portaria nº
-            2.613/2012, “o Comitê de Especialistas em Saúde Prisional será
-            composto por membros que representam os segmentos do poder público, da comunidade científica e
-            da sociedade, oriundos de instituições públicas e privadas envolvidas em atividades de pesquisa”.
-            Então, apenas a alternativa “a” está correta.</div>
-        <input type="hidden" name="resposta" value="1">
-        <input type="button" value="Submeter">
+        <form>
+            <input type="radio" name="opcao" value="0">
+            <label>O Comitê de Especialistas em Saúde Prisional será composto de membros que
+                representam os segmentos do poder público, da comunidade científica e da sociedade,
+                oriundos de instituições públicas e privadas envolvidas em atividades de pesquisa.</label>
+            <div class="me_feedback"> <img class="img-logo" src="recursos/imgs/SI_CE.png">Parabéns! De acordo com o art.
+                2º, da Portaria nº 2.613/2012, “o Comitê de Especialistas
+                em Saúde Prisional será composto por membros que representam os segmentos do
+                poder público, da comunidade científica e da sociedade, oriundos de instituições
+                públicas e privadas envolvidas em atividades de pesquisa”.</div>
+            <input type="radio" name="opcao" value="1">
+            <label>O Comitê de Especialistas em Saúde Prisional será composto de membros que
+                representam empresários do ramo da segurança pública, da comunidade científica e
+                da sociedade, oriundos de instituições públicas e privadas envolvidas em atividades de
+                pesquisa.</label>
+            <div class="me_feedback"> <img class="img-logo" src="recursos/imgs/SI_CE.png">De acordo com o art. 2º, da
+                Portaria nº 2.613/2012, “o Comitê de Especialistas em Saúde Prisional será
+                composto por membros que representam os segmentos do poder público, da comunidade científica e
+                da sociedade, oriundos de instituições públicas e privadas envolvidas em atividades de pesquisa”.
+                Então, apenas a alternativa “a” está correta.</div>
+            <input type="radio" name="opcao" value="3">
+            <label>O Comitê de Especialistas em Saúde Prisional será composto de membros que
+                representam os segmentos do poder público, da comunidade científica e da sociedade,
+                oriundos de instituições públicas e privadas envolvidas em atividades de ensino e
+                extensão.</label>
+            <div class="me_feedback"> <img class="img-logo" src="recursos/imgs/SI_CE.png">De acordo com o art. 2º, da
+                Portaria nº
+                2.613/2012, “o Comitê de Especialistas em Saúde Prisional será
+                composto por membros que representam os segmentos do poder público, da comunidade científica e
+                da sociedade, oriundos de instituições públicas e privadas envolvidas em atividades de pesquisa”.
+                Então, apenas a alternativa “a” está correta.</div>
+            <input type="radio" name="opcao" value="4">
+            <label>O Comitê de Especialistas em Saúde Prisional será composto de 29 membros que
+                representam os segmentos do poder público, da comunidade científica e da sociedade,
+                oriundos de instituições públicas e privadas envolvidas em atividades de pesquisa.</label>
+            <div class="me_feedback"> <img class="img-logo" src="recursos/imgs/SI_CE.png">De acordo com o art. 2º, da
+                Portaria nº
+                2.613/2012, “o Comitê de Especialistas em Saúde Prisional será
+                composto por membros que representam os segmentos do poder público, da comunidade científica e
+                da sociedade, oriundos de instituições públicas e privadas envolvidas em atividades de pesquisa”.
+                Então, apenas a alternativa “a” está correta.</div>
+            <input type="radio" name="opcao" value="4">
+            <label>O Comitê de Especialistas em Saúde Prisional será composto de pessoas da
+                sociedade civil que simpatizem com atividades de pesquisa.</label>
+            <div class="me_feedback"> <img class="img-logo" src="recursos/imgs/SI_CE.png">De acordo com o art. 2º, da
+                Portaria nº
+                2.613/2012, “o Comitê de Especialistas em Saúde Prisional será
+                composto por membros que representam os segmentos do poder público, da comunidade científica e
+                da sociedade, oriundos de instituições públicas e privadas envolvidas em atividades de pesquisa”.
+                Então, apenas a alternativa “a” está correta.</div>
+            <input type="hidden" name="resposta" value="0">
+            <input type="button" value="Submeter">
         </form>
         </div>
-    </section>
 
+    </section>
 
 
     <section id="resultados">
