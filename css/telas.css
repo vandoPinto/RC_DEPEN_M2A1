@@ -894,3 +894,63 @@ audio {
     height: 40px;
     width: 90%;
 }
+
+.segundo-1{
+    --animate-duration: 1s;
+}
+
+.segundo-1-5{
+    --animate-duration: 1.5s;
+}
+
+.segundo-2{
+    --animate-duration: 2s;
+}
+
+.segundo-2-5{
+    --animate-duration: 2.5s;
+}
+
+.segundo-3{
+    --animate-duration: 3s;
+}
+
+.segundo-3-5{
+    --animate-duration: 3.5s;
+}
+
+.segundo-4{
+    --animate-duration: 4s;
+}
+
+.segundo-4-5{
+    --animate-duration: 4.5s;
+}
+
+.segundo-5{
+    --animate-duration: 5s;
+}
+
+.segundo-5-5{
+    --animate-duration: 5.5s;
+}
+
+.segundo-6{
+    --animate-duration: 6s;
+}
+
+.segundo-7{
+    --animate-duration: 7s;
+}
+
+.segundo-8{
+    --animate-duration: 8s;
+}
+
+.segundo-9{
+    --animate-duration: 9s;
+}
+
+.segundo-10{
+    --animate-duration: 10s;
+}
