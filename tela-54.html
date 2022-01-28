@@ -1,18 +1,7 @@
 <style>
-    .submeter {
-        margin: 1em auto;
-        font-weight: bold;
-        color: #ffffff;
-        border-radius: 3px;
-        background-color: #FAC900;
-        border: solid 0 transparent;
-        outline: none;
-        box-shadow: 0 .1em rgba(0, 0, 0, .5);
-        padding: .5em;
-        display: block;
-        width: 50%;
-        cursor: pointer;
-        text-align: center;
+    li {
+        margin-bottom: 12px;
+        margin-left: 18px;
     }
 </style>
 <div style="height: 72px; width: 100%; background-color:  #FF592A; ">
@@ -21,35 +10,43 @@
     <img style="height: 73px; margin-left:170.85px;" src="recursos/imgs/SI_H2.png">
     <img style="height: 46.8px; width:56.75px;  position: absolute; right: 1px;" src="recursos/imgs/SI_H3.png">
 </div>
-<div class="coluna-esquerda largura-1_3">
-    <img class="animate__animated animate__flipInX"
-        style="height: 219.4px; width: 241.85px; margin-top: 80.65px; margin-left: 35px;" src="recursos/imgs/SI_46.png">
+<div class="coluna-esquerda largura-1_3 animate__animated animate__flipInX">
+    <img style="height: 219.4px; width: 241.85px; margin-top: 80.65px; margin-left: 35px;"
+        src="recursos/imgs/SI_46.png">
 </div>
-<div class="coluna-direita largura-2_1" style="width: 500px; height: 500px; margin-top: 80px;margin-right: 75px;">
-    <h1>Rendimento</h1>
-    <p id="texto"></p>
-    <p>Você pode refazer este exercício quantas vezes quiser.</p>
+<div class="coluna-direita largura-2_1 ">
+    <div style="width: 538px;margin-top: 80px;margin-right: 37px;">
+        <h1>Referências Bibliográficas</h1>
+        <ul>
+            <li>BRASIL. Conselho Federal de Psicologia.<strong> Atuação da(o) psicóloga(o) no campo da
+                    execução penal no Brasil: relatório descritivo</strong>. Brasília: CFP, 2019. Disponível em:
+                <a href="https://site.cfp.org.br/publicacao/atuacao-dao-psicologao-no-campo-da-execucao-penal-no-brasil/"
+                    target="_blank">https://site.cfp.org.br/publicacao/atuacao-dao-psicologao-no-campo-da-execuc<br>ao-penal-no-brasil/.</a>
+                Acesso em: 27 set. 2021.
+            </li>
+
+            <li>BRASIL. Conselho Nacional de Justiça. Departamento Penitenciário Nacional.<br>
+                <strong>Modelo de gestão da política prisional</strong>: Caderno I: fundamentos conceituais e
+                principiológicos. Brasília: CNJ, 2020a. Disponível em:<br>
+                <a href="https://www.cnj.jus.br/wp-content/uploads/2020/09/CAD_1-modelo_gest%C3%A3o_politica_prisional_eletronico.pdf"
+                    target="_blank">https://www.cnj.jus.br/wp-content/uploads/2020/09/CAD_1-modelo_gest%C3%A<br>3o_politica_prisional_eletronico.pdf.</a>
+                Acesso em: 28 set. 2021.
+            </li>
+
+
+            <li>BRASIL. Ministério da Justiça e Segurança Pública. Departamento Penitenciário<br>
+                Nacional.<strong> Nota Técnica nº 23/2020/COS/CGCAP/DIRPP/DEPEN/MJ</strong>. Brasília: MJSP,<br>
+                2020b. Disponível em:<br>
+                <a href="https://www.gov.br/depen/pt-br/centrais-de-conteudo/publicacoes/notastecnicas/diversos/O%20acesso%20a%20saude%20no%20Sistema%20Prisional.pdf"
+                    target="_blank">https://www.gov.br/depen/pt-br/centrais-de-conteudo/publicacoes/notastecnicas<br>/diversos/O%20acesso%20a%20saude%20no%20Sistema%20Prisional.pdf.</a> Acesso<br>
+                em: 27 set. 2021.
+            </li>
+        </ul>
+
+    </div>
 </div>
 <footer style="height: 39.05px; width: 100%; background-color:  #FF592A;">
     <img style="height: 22.65px; margin: 8.5px 37.05px;" src="recursos/imgs/SI_F1.png">
-    <img style="height: 22.75px; margin: 8.5px 37.05px; position: absolute; right: 0px;" src="recursos/imgs/SI_F2.png">
+    <img style="height: 22.75px; margin: 8.5px 37.05px; position: absolute; right: 0px;"
+        src="recursos/imgs/SI_F2.png">
 </footer>
-<script>
-    $(() => {
-        let resposta = '';
-        var conteudo = $("#texto").html();
-        let submeter = $(document).find('[class=submeter]').on('click', () => {
-            console.log('tentando');
-            window.location("#tela-54")
-        });
-        console.log(qtdQuestoes);
-        console.log(pontos);
-        if (pontos == qtdQuestoes) {
-            console.log("certo");
-            $("#texto").html("<p>De um total de " + qtdQuestoes + " questões, você acertou " + pontos + ".</p>")
-        } else {
-            console.log("errado");
-            $("#texto").html("<p>De um total de " + qtdQuestoes + " questões, você acertou " + pontos + ".</p><p style='color: red;'>Estude um pouco mais o conteúdo do curso e refaça a avaliação quando se sentir preparado(a).</p>")
-        }
-    })
-</script>
