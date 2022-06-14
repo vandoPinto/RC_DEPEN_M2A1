@@ -38,6 +38,10 @@
         flex-wrap: nowrap;
         cursor: pointer;
     }
+
+    input {
+        text-transform: uppercase;
+    }
 </style>
 <div style="height: 72px; width: 100%; background-color: #FF592A; ">
     <div style="background-color: white; width: 17px; height: 66px; margin-left: 19px; display: flex;" /> <img
@@ -66,32 +70,45 @@
         <img style="height: 70px; margin-top: -48px; margin-left: 30px;margin-bottom: 15px;"
             src="recursos/imgs/SI_CE.png">
         <h2 style="margin-left: 30px;">Resposta correta</h2>
-        <p style="margin-left: 30px; width: 450px;">Parabéns! De acordo com com a Portaria GM/MS n<sup>o</sup> 2.298/2021, ao considerar a população prisional e o funcionamento dos
-        serviços de saúde, o MS classifica os estabelecimentos prisionais, em três faixas, a saber:
-        I - unidades prisionais que contenham até 300 (trezentos) custodiados: serviço de saúde com funcionamento mínimo de 6
-        (seis) horas semanais, sob responsabilidade do ente municipal, por meio de eAPP;
-        II - unidades prisionais que contenham de 101 (cento e um) a 1.700 (mil e setecentos) custodiados: serviço de saúde com
-        funcionamento mínimo de 20 (vinte) horas semanais, sob responsabilidade do ente estadual ou municipal, por meio de eAPP
-        Essencial ou Ampliada;
-        III - unidades prisionais que contenham de 1.201 (mil duzentos e um) a 2.700 (dois mil e setecentos) custodiados:
-        serviço de saúde com funcionamento mínimo de 30 (trinta) horas semanais, sob responsabilidade do estado ou município,
-        por meio de eAPP Essencial ou Ampliada podendo esta ser complementada.</p>
+        <p style="margin-left: 30px; width: 450px;">Parabéns! De acordo com com a Portaria GM/MS n<sup>o</sup>
+            2.298/2021, ao considerar a população prisional e o funcionamento dos
+            serviços de saúde, o MS classifica os estabelecimentos prisionais, em três faixas, a saber:
+            I - unidades prisionais que contenham até 300 (trezentos) custodiados: serviço de saúde com funcionamento
+            mínimo de 6
+            (seis) horas semanais, sob responsabilidade do ente municipal, por meio de eAPP;
+            II - unidades prisionais que contenham de 101 (cento e um) a 1.700 (mil e setecentos) custodiados: serviço
+            de saúde com
+            funcionamento mínimo de 20 (vinte) horas semanais, sob responsabilidade do ente estadual ou municipal, por
+            meio de eAPP
+            Essencial ou Ampliada;
+            III - unidades prisionais que contenham de 1.201 (mil duzentos e um) a 2.700 (dois mil e setecentos)
+            custodiados:
+            serviço de saúde com funcionamento mínimo de 30 (trinta) horas semanais, sob responsabilidade do estado ou
+            município,
+            por meio de eAPP Essencial ou Ampliada podendo esta ser complementada.</p>
     </div>
     <div style="margin-top: -288px; width: 500px; height: 277px;" class="feed" id="feedErrado">
         <img style="height: 70px; margin-top: -48px; margin-left: 30px;margin-bottom: 15px;"
             src="recursos/imgs/SI_CE.png">
         <h2 style="margin-left: 30px;">Resposta incorreta</h2>
-        <p style="margin-left: 30px; width: 450px;">Na verdade, a sequência correta não é essa. Vamos conferir? De acordo com a Portaria GM/MS n<sup>o</sup> 2.298/2021, ao considerar
-        a população prisional e o funcionamento dos serviços de saúde, o MS classifica os estabelecimentos prisionais, em três
-        faixas, a saber:
-        I - unidades prisionais que contenham até 300 (trezentos) custodiados: serviço de saúde com funcionamento mínimo de 6
-        (seis) horas semanais, sob responsabilidade do ente municipal, por meio de eAPP;
-        II - unidades prisionais que contenham de 101 (cento e um) a 1.700 (mil e setecentos) custodiados: serviço de saúde com
-        funcionamento mínimo de 20 (vinte) horas semanais, sob responsabilidade do ente estadual ou municipal, por meio de eAPP
-        Essencial ou Ampliada;
-        III - unidades prisionais que contenham de 1.201 (mil duzentos e um) a 2.700 (dois mil e setecentos) custodiados:
-        serviço de saúde com funcionamento mínimo de 30 (trinta) horas semanais, sob responsabilidade do estado ou município,
-        por meio de eAPP Essencial ou Ampliada podendo esta ser complementada.</p>
+        <p style="margin-left: 30px; width: 450px;">Na verdade, a sequência correta não é essa. Vamos conferir? De
+            acordo com a Portaria GM/MS n<sup>o</sup> 2.298/2021, ao considerar
+            a população prisional e o funcionamento dos serviços de saúde, o MS classifica os estabelecimentos
+            prisionais, em três
+            faixas, a saber:
+            I - unidades prisionais que contenham até 300 (trezentos) custodiados: serviço de saúde com funcionamento
+            mínimo de 6
+            (seis) horas semanais, sob responsabilidade do ente municipal, por meio de eAPP;
+            II - unidades prisionais que contenham de 101 (cento e um) a 1.700 (mil e setecentos) custodiados: serviço
+            de saúde com
+            funcionamento mínimo de 20 (vinte) horas semanais, sob responsabilidade do ente estadual ou municipal, por
+            meio de eAPP
+            Essencial ou Ampliada;
+            III - unidades prisionais que contenham de 1.201 (mil duzentos e um) a 2.700 (dois mil e setecentos)
+            custodiados:
+            serviço de saúde com funcionamento mínimo de 30 (trinta) horas semanais, sob responsabilidade do estado ou
+            município,
+            por meio de eAPP Essencial ou Ampliada podendo esta ser complementada.</p>
     </div>
 </div>
 <footer style="height: 39.05px; width: 100%; background-color: #FF592A;">
@@ -103,7 +120,7 @@
     $(() => {
         pontos = 0;
         let respondido = [];
-        let gabarito = [1, 3, 2];
+        let gabarito = ["I", "III", "II"];
         let comparacao = [];
         let mostrarSub = true;
         let resposta = '';
@@ -137,7 +154,7 @@
         $(submeter).on('click', () => {
             questao.map((index, selected) => {
                 console.log(selected.value);
-                if (selected.value == gabarito[index]) {
+                if (selected.value.toUpperCase() == gabarito[index]) {
                     comparacao[index] = true;
                 }
             })
